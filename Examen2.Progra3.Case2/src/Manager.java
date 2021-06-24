@@ -116,7 +116,7 @@ public class Manager implements Subject{
     	else if(actualDevices > previousDevices) {
     		IExtra extra = new Extra();
     		extraTmp = extra.extra(amount,DISCOUNT);
-    		System.out.println("Descuento de $: " + extraTmp);
+    		System.out.println("|Descuento de $: " + extraTmp);
     		amountTmp = amountTmp - extraTmp; 
     	}
     	return amountTmp;
