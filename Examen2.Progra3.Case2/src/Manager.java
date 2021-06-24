@@ -54,22 +54,21 @@ public class Manager implements Subject{
         
         for(int i =0; i < observers.size(); i++){
             client = observers.get(i);
-            
-            System.out.println("----------------------------------------------------");
-            System.out.println("Cliente: " + client.getName());
-            
-            actualDevices = client.getActualdevices();
-            previousDevices = client.getPreviousDevices();
-            
-            System.out.println("Dispositivos: " + client.getActualdevices());
-            System.out.print("Pago por dispositivo ");
+            System.out.println("+=====+==========================================+");
+            System.out.println("|Información personal del cliente                |");
+            System.out.println("+=====+==========================================+");
+            System.out.println("|Nombre: " + client.getName()); 
+            actualDevices = client.getActualdevices(); 
+            previousDevices = client.getPreviousDevices();         
+            System.out.println("|Dispositivos: " + client.getActualdevices());
+            System.out.print("|Pago por dispositivo:");
             monto = payForDevices(actualDevices);
             
             if(previousDevices != 0) {
             monto = extraPayment(actualDevices, previousDevices, monto);
             }
-            
             client.updatePayment(monto);
+            System.out.println("+=====+==========================================+\n\n");
         }
     }
     
@@ -111,13 +110,13 @@ public class Manager implements Subject{
     	if(actualDevices < previousDevices){
     		IExtra extra = new Extra();
             extraTmp = extra.extra(amount, SURCHARGE);
-            System.out.println("Recargo de $" + extraTmp);
+            System.out.println("|Recargo de $: " + extraTmp);
             amountTmp = amountTmp + extraTmp;   
     	}
     	else if(actualDevices > previousDevices) {
     		IExtra extra = new Extra();
     		extraTmp = extra.extra(amount,DISCOUNT);
-    		System.out.println("Descuento de $" + extraTmp);
+    		System.out.println("Descuento de $: " + extraTmp);
     		amountTmp = amountTmp - extraTmp; 
     	}
     	return amountTmp;
