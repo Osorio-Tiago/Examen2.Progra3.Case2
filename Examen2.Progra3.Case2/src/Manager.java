@@ -15,7 +15,7 @@ public class Manager implements Subject{
  * 
  */
 	
-    private List<Client> observers = new ArrayList();
+    private List<Client> observers = new ArrayList<Client>();
     
     /*
      *  Constantes que contienen los valores de descuento y recargo lo que lo hace más fácil de cambiar en algún futuro.
