@@ -1,20 +1,26 @@
 
 public class Main {
 
+	/*Examen II - Justificación de los patrones seleccionados - Caso II:
+	/*
+	 * 
+	 * Para el caso 2 se nos solicitó un sistema de cobro con el cual tendremos 2 varibles importantes de 
+	 * modelo de negocio, por una lado los descuentos o recargos segun la varible de cantidad dispositivos 
+	 * entre meses y la segunta el monto a facturar segun la cantidad de dipositivos asignados a cada cliente.
+	 * Al observar que mediante varios metodos había que hacer calculos similares decidimos implementar 
+	 * el patron Strategy que no solo nos da facilidad de manipulación para este proceso sino tambien para los 
+	 * futuros cambios en el modelo de negocio de la empresa, además de esto para hacerlo de una manera más 
+	 * apegado a la realidad implementamos el patron Observer con el cual generaremos notificaciónes a los clientes
+	 * sobre el estados de cobro segun los dipositivos agregados. 
+	 * 
+	 * 
+	 */
+	
+	
 	public static void main(String[] args) {
         Manager manager = new Manager();
         
-        /*
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         * QUITAR TODO ESTO Y USAR NOMBRES DISTINTOS PARA LOS CLIENTES
-         */
+
         Client client1 = new Client("Ariadna Chavarría");
         Client client2 = new Client("Santiago Osorio  ");
         Client client3 = new Client("Moisés Bolaños   ");

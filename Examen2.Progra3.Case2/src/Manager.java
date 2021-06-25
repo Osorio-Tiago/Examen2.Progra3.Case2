@@ -3,6 +3,17 @@ import java.util.List;
 
 public class Manager implements Subject{
 
+/*
+ * La clase Manager es nuestra clase principal ya que es por medio de la cual veremos la funcionalidad de los
+ * 2 patrones trabajando entre si, por un lado tenemos el patron Strategy que nos permite
+ * remplazar las extrategias segun las necesidad de negocio con base a los Extras y Costos que se establezcan
+ * en ambos. Si se quiere cambiar el descuento para los dispositivos segun el mes o el recargo este patron 
+ * nos da la oportunidad de hacerlo de una manera eficiente y por otro lado se puede observar que 
+ * implementa la clase Subject con la cual utilizamos el segundo patron, el Observer este con el fin 
+ * de agregar a los futuros clientes como observadores y así notificar el estado de los costos ya aplicando
+ * los cálculos definidos
+ * 
+ */
 	
     private List<Client> observers = new ArrayList();
     

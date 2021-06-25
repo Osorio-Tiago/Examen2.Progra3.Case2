@@ -1,6 +1,13 @@
 
 public class Client {
-    
+    /*
+     * La clase cliente es nuestra clase modelo la cual utilizaremos para guardar datos importandes que vamos 
+     * a procesar junto a los dispositivos conectados a ellos.
+     * 
+     * */
+	
+	
+	
     String name;
     int actualDevices = 0;
     int previousDevices = 0;
