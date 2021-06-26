@@ -14,9 +14,9 @@ public class Manager implements Subject{
  * los cálculos definidos
  * 
  */
-	
+
     private List<Client> observers = new ArrayList<Client>();
-    
+
     /*
      *  Constantes que contienen los valores de descuento y recargo lo que lo hace más fácil de cambiar en algún futuro.
      */
@@ -77,6 +77,7 @@ public class Manager implements Subject{
             
             if(previousDevices != 0) {
             monto = extraPayment(actualDevices, previousDevices, monto);
+            client.setPreviousDevices(actualDevices);
             }
             client.updatePayment(monto);
             System.out.println("+=====+==========================================+\n\n");
